@@ -13,8 +13,8 @@ jobs:
         with:
           python-version: '3.8' 
       - run: |
-        python scripts/fetch_packages.py
-        python scripts/generate_remote_db.py
+          python scripts/fetch_packages.py
+          python scripts/generate_remote_db.py
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[Bot] Update repo content using seed sources"
