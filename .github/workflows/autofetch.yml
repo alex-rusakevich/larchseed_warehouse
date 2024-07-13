@@ -1,0 +1,23 @@
+name: Fetch package seeds from all seed sources
+
+on:
+  schedule:
+    - cron: "30 11 * * *"
+
+jobs:  
+  cron:    
+    runs-on: [self-hosted, universal]    
+    steps:      
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.8' 
+      - run: |
+        python scripts/fetch_packages.py
+        python scripts/generate_remote_db.py
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[Bot] Update repo content using seed sources"
+          commit_user_name: Alexander Rusakevich
+          commit_user_email: mr.alexander.rusakevich@gmail.com
+          commit_author: Alexander Rusakevich <mr.alexander.rusakevich@gmail.com>
