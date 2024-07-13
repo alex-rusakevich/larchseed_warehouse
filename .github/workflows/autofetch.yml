@@ -3,6 +3,12 @@ name: Fetch package seeds from all seed sources
 on:
   schedule:
     - cron: "30 11 * * *"
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:  
   cron:    
