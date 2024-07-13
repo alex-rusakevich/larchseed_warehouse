@@ -2,6 +2,7 @@
 import sqlite3
 from glob import glob
 import os
+from datetime import datetime, timezone
 
 
 def main():
@@ -34,6 +35,10 @@ def main():
 
     cursor.close()
     connection.close()
+
+    with open(".remote-db-timestamp", "w", encoding="utf8") as f:
+        f.write(str(datetime.now(timezone.utc)))
+        f.write("\n")
 
 
 if __name__ == "__main__":
