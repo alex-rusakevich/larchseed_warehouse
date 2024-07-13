@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: "0 1 * * *"
   workflow_dispatch:
-    
+
   push:
     branches:
       - main
@@ -13,8 +13,12 @@ on:
       - main
 
 jobs:  
-  cron:    
-    runs-on: [self-hosted, universal]    
+  fetch-seeds:    
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+
     steps:      
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
