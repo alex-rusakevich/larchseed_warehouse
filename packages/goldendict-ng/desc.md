@@ -1,0 +1,1 @@
+The next generation GoldenDict (Supports Qt WebEngine & Qt6)

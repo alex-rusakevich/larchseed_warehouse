@@ -8,6 +8,8 @@ MAINTAINER = "Alexander Rusakevich (mr.alexander.rusakevich@gmail.com)"
 URL = "https://github.com/xiaoyifang/goldendict-ng"
 LICENSE = "GPL3"
 
+DEPENDENCIES = ["vcredist140"]
+
 SOURCE = {
     "goldendict.zip": "https://github.com/xiaoyifang/goldendict-ng/releases/download/v24.05.05-LiXia.ecd1138c/6.6.3-GoldenDict.exe_windows-2019_20240505.zip"
 }
