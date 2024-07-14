@@ -4,7 +4,8 @@
             "git": "https://github.com/alex-rusakevich/larch_source.git",
             "packages": [
                 "goldendict-ng",
-                "antconc3"
+                "antconc3",
+                "vcredist140"
             ]
         }
     ]
