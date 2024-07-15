@@ -18,6 +18,8 @@ elif CURRENT_ARCH == "Windows_32bit":
         "vcredist140.exe": "https://download.visualstudio.microsoft.com/download/pr/9c69db26-cda4-472d-bdae-f2b87f4a0177/A32DD41EAAB0C5E1EAA78BE3C0BB73B48593DE8D97A7510B97DE3FD993538600/VC_redist.x86.exe"
     }
 
+ENTRY_POINT = None
+
 
 def install(temp_dir: str, dest_dir: str):
     run_exe(join_path(temp_dir, "vcredist140.exe"), "/install", "/q")
