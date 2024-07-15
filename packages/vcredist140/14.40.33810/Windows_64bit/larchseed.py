@@ -22,8 +22,8 @@ ENTRY_POINT = None
 
 
 def install(temp_dir: str, dest_dir: str):
-    run_exe(join_path(temp_dir, "vcredist140.exe"), "/install", "/q")
+    run(join_path(temp_dir, "vcredist140.exe"), "/install", "/q")
 
 
 def uninstall(temp_dir: str, dest_dir: str):
-    run_exe(join_path(temp_dir, "vcredist140.exe"), "/uninstall", "/q")
+    run(join_path(temp_dir, "vcredist140.exe"), "/uninstall", "/q")
