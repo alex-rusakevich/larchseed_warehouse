@@ -21,9 +21,9 @@ elif CURRENT_ARCH == "Windows_32bit":
 ENTRY_POINT = None
 
 
-def install(temp_dir: str, dest_dir: str):
-    run(join_path(temp_dir, "vcredist140.exe"), "/install", "/q")
+def install(temp_dir, dest_dir):
+    run(temp_dir / "vcredist140.exe", "/install", "/q")
 
 
-def uninstall(temp_dir: str, dest_dir: str):
-    run(join_path(temp_dir, "vcredist140.exe"), "/uninstall", "/q")
+def uninstall(temp_dir, dest_dir):
+    run(temp_dir / "vcredist140.exe", "/uninstall", "/q")

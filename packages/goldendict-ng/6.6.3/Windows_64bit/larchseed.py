@@ -17,6 +17,6 @@ SOURCE = {
 ENTRY_POINT = "GoldenDict.exe"
 
 
-def install(temp_dir: str, dest_dir: str):
-    unzip(join_path(temp_dir, "goldendict.zip"), temp_dir)
-    copytree(join_path(temp_dir, "GoldenDict-Windows.ecd1138c-142735"), dest_dir)
+def install(temp_dir, dest_dir):
+    unzip(temp_dir / "goldendict.zip", temp_dir)
+    copytree(temp_dir / "GoldenDict-Windows.ecd1138c-142735", dest_dir)
