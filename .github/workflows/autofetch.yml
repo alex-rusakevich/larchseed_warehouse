@@ -1,8 +1,6 @@
 name: Fetch package seeds from all seed sources
 
 on:
-  schedule:
-    - cron: "0 1 * * *"
   workflow_dispatch:
 
   push:
